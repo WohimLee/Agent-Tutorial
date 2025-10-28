@@ -1,0 +1,35 @@
+## LangGraph 生态
+
+```
+[你的应用]
+   ├─ LangChain 生态（构建/调用工具 & 模型）
+   │   ├─ langchain (1.0.2) ← 总入口/“元包”
+   │   │    ├─ langchain-core (1.0.1)      ← 抽象接口/消息、Runnable等基石
+   │   │    ├─ langchain-community (0.4)   ← 社区集成（多数第三方工具/向量库/加载器）
+   │   │    └─ langchain-text-splitters (1.0.0) ← 文本切分工具
+   │   ├─ 模型/服务商适配器（都基于 langchain-core）
+   │   │    ├─ langchain-openai (1.0.1)
+   │   │    ├─ langchain-anthropic (0.3.18)
+   │   │    ├─ langchain-fireworks (0.3.0)
+   │   │    ├─ langchain-deepseek (1.0.0)
+   │   │    └─ langchain-tavily (0.2.12) ← Tavily 搜索工具适配
+   │   └─ langchain-experimental (0.3.4) ← 实验性特性/不保证稳定API
+   │
+   ├─ LangGraph 生态（有状态/可编排的“Agent图”运行时）
+   │   ├─ langgraph (1.0.1)                 ← 核心库（构图、节点、通道等）
+   │   ├─ langgraph-checkpoint (2.1.1)      ← 持久化检查点/回溯
+   │   ├─ langgraph-runtime-inmem (0.6.5)   ← 内存型运行时
+   │   ├─ langgraph-prebuilt (1.0.1)        ← 预置/模板化组件
+   │   ├─ langgraph-supervisor (0.0.30)     ← 监督/多Agent协调
+   │   ├─ langgraph-cli (0.3.6)             ← 命令行
+   │   ├─ langgraph-api (0.2.110)           ← 托管/服务化接口
+   │   └─ langgraph-sdk (0.2.9)             ← 客户端SDK（连 API 用）
+   │
+   ├─ 观测/评测
+   │   └─ langsmith (0.4.8)                 ← 跟踪、评测、数据集/实验面板
+   │
+   └─ 通用语言工具
+       ├─ langcodes (3.5.0) + language_data (1.3.0) ← 语言/地区代码数据（langcodes 依赖 language_data）
+       └─ langdetect (1.0.9)                         ← 语言检测
+
+```

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://langgra.ph/schema.json",
+  "dependencies": ["."],
+  "graphs": {
+    "supervisor": "./src/architetures/graph_supervisor.py:graph_supervisor",
+    "networks": "./src/architetures/graph_network.py:graph_network",
+    "hierarchical": "./src/architetures/graph_hierarchical.py:graph_hierarchical"
+  },
+  "env": ".env",
+  "image_distro": "wolfi"
+}
