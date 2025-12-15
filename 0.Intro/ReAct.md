@@ -1,4 +1,4 @@
-## ReAct（Reason + Act
+## ReAct（Reason + Act）
 ### 🧠 1. ReAct 是什么？
 
 ReAct（Reason + Act）是一种 agent 推理范式，由论文提出，不是软件库。
