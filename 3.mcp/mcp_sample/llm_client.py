@@ -16,7 +16,7 @@ from mcp.client.stdio import StdioServerParameters, stdio_client
 from dotenv import load_dotenv
 
 # 加载环境变量
-load_dotenv()
+load_dotenv("/Users/azen/Desktop/llm/.env")
 
 class LLMWithMCP:
     """集成LLM和MCP的客户端类，使用原生工具调用"""

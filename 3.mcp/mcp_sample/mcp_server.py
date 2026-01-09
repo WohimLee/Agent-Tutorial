@@ -12,7 +12,7 @@ from mcp.types import TextContent
 from dotenv import load_dotenv
 
 # 加载环境变量
-load_dotenv()
+load_dotenv("/Users/azen/Desktop/llm/.env")
 
 # 创建MCP服务器实例
 mcp = FastMCP("Search Tools Server")

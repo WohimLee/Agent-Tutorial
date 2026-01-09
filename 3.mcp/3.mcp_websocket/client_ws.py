@@ -10,15 +10,15 @@ import mcp
 from mcp.client.websocket import websocket_client
 
 from dotenv import load_dotenv
-load_dotenv("/Users/azen/Desktop/llm/ZJU-Tutorial/.env")
+load_dotenv("/Users/azen/Desktop/llm/.env")
 
 ############################################
 # 1. 初始化 LLM 客户端（Qwen）
 ############################################
 
 llm_client = OpenAI(
-    api_key=os.getenv("ALIBABA_API_KEY"),
-    base_url=os.getenv("ALIBABA_API_URL"),
+    api_key=os.getenv("DASHSCOPE_API_KEY"),
+    base_url=os.getenv("DASHSCOPE_API_URL"),
 )
 
 MODEL_NAME = "qwen3-max"

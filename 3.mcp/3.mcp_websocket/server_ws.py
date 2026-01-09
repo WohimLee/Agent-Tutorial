@@ -14,7 +14,7 @@ from mcp.server.fastmcp import FastMCP
 from mcp.server.websocket import websocket_server
 
 from dotenv import load_dotenv
-load_dotenv("/Users/azen/Desktop/llm/ZJU-Tutorial/.env")
+load_dotenv("/Users/azen/Desktop/llm/.env")
 
 # ========================================
 # 1. 创建 FastMCP 实例 & 工具
