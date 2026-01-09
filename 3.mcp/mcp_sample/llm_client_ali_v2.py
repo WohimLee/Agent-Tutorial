@@ -20,7 +20,7 @@ from typing import Any, Dict, List, Optional
 from dotenv import load_dotenv
 from openai import OpenAI
 from mcp.client.session import ClientSession
-from mcp.client.streamable_http import streamablehttp_client
+from mcp.client.streamable_http import streamable_http_client
 
 # ──────────────────────────────── 环境变量 ────────────────────────────────
 ENV_PATH = Path(__file__).parent / ".env"
@@ -53,14 +53,14 @@ class MCPClient:
         self._url = f"https://mcp.amap.com/mcp?key={api_key}"
 
     async def list_tools(self) -> List[dict]:
-        async with streamablehttp_client(self._url) as (read, write, _):
+        async with streamable_http_client(self._url) as (read, write, _):
             async with ClientSession(read, write) as s:
                 await s.initialize()
                 result = await s.list_tools()
                 return [t.model_dump() for t in result.tools]  # type: ignore
 
     async def call_tool(self, name: str, params: Dict[str, Any]) -> str:
-        async with streamablehttp_client(self._url) as (read, write, _):
+        async with streamable_http_client(self._url) as (read, write, _):
             async with ClientSession(read, write) as s:
                 await s.initialize()
                 resp = await s.call_tool(name, params)
