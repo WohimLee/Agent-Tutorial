@@ -54,6 +54,7 @@ A --> B --> C
 ### 2️⃣ `A1 A2 A3 ...`（编号型）
 
 ```mermaid
+flowchart LR
 A1 --> A2 --> A3
 ```
 

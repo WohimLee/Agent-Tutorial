@@ -106,7 +106,6 @@ got 'NODE_STRING'
 ## 给你一个“永不翻车”的方向写法模板
 
 ### 顶层
-
 ```mermaid
 flowchart TB
 ```
